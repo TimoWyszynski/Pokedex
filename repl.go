@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/TimoWyszynski/Pokedex/internal/pokeapi"
+	"github.com/TimoWyszynski/Pokedex/internal/pokecache"
 )
 
 type config struct {
@@ -14,6 +15,7 @@ type config struct {
 	pokeapiClient    pokeapi.Client
 	nextLocationsURL *string
 	prevLocationsURL *string
+	pokeCache        *pokecache.Cache
 }
 
 func startRepl(cfg *config) {
